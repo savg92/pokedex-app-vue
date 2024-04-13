@@ -23,14 +23,9 @@ defineProps<{
         </CardHeader>
         <CardContent>
             <CardTitle>{{name}}</CardTitle>
-            <CardDescription>
-            <!-- {types.map((type: PokemonType, index: number) => (
-                    <span key={index}>
-                        {{type.type.name}}
-                    </span>
-                ))} -->
+            <CardDescription class="flex flex-col">
                     <span v-for='(type, index) in types' :key='index'>
-                        '{{type.type.name}}'
+                        {{type.type.name}}
                     </span>
             </CardDescription>
         </CardContent>

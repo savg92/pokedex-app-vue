@@ -1,23 +1,11 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import CardPokemon from './components/CardPokemon.vue'
-// import { ref } from 'vue'
-
-// const pokemons = ref([
-//   {
-//     name: 'bulbasaur',
-//     sprites: {
-//       front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
-//     },
-//     types: [
-//       { type: { name: 'grass' } },
-//       { type: { name: 'poison' } }
-//     ]
-//   },
-// ])
+import Theme from './components/Theme.vue'
 </script>
 
 <template>
+  <Theme/>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
