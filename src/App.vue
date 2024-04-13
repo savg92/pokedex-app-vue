@@ -16,6 +16,9 @@ import HelloWorld from './components/HelloWorld.vue'
   <p class="text-bold text-yellow-400">
     HelloWorld
   </p>
+  <p>
+    nothing to ship today
+  </p>
 </template>
 
 <style scoped>
