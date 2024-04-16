@@ -1,8 +1,9 @@
 <script setup lang="ts">
 	import CardPokemon from '@/components/CardPokemon.vue';
-import { getPokemon } from '@/services/pokemonApi';
+	import { getPokemon } from '@/services/pokemonApi';
 	import { useQuery } from '@tanstack/vue-query';
 	import { ref, watchEffect } from 'vue';
+import { RouterLink } from 'vue-router';
 
 	const favorites = ref<string[]>(
 		localStorage.getItem('favorites')
@@ -32,17 +33,20 @@ import { getPokemon } from '@/services/pokemonApi';
 		class="flex flex-col gap-4 items-center justify-center"
 	>
 		<div>
-			<h1 class="text-4xl text-center font-bold">
-            Favorites</h1>
+			<h1 class="text-4xl text-center font-bold">Favorites</h1>
 		</div>
 		<div class="flex flex-wrap gap-4 items-center justify-center">
-			<CardPokemon
+			<RouterLink
 				v-for="pokemon in data"
 				:key="pokemon.name"
-				:name="pokemon.name"
-				:img="pokemon.sprites.other['official-artwork'].front_default"
-				:types="pokemon.types"
-			/>
+				:to="`/${pokemon.name}`"
+			>
+				<CardPokemon
+					:name="pokemon.name"
+					:img="pokemon.sprites.other['official-artwork'].front_default"
+					:types="pokemon.types"
+				/>
+			</RouterLink>
 		</div>
 	</div>
 </template>
