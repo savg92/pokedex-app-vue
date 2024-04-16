@@ -10,12 +10,12 @@
 	<div class="flex justify-center gap-4 mt-4">
 		<RouterLink to="/">
 			<Button
-      variant="outline"
+      variant="ghost"
       > Go to Home </Button>
 		</RouterLink>
 		<RouterLink to="/favorites">
 			<Button
-        variant="outline"
+        variant="ghost"
       > Go to Favorites </Button>
 		</RouterLink>
 	</div>
