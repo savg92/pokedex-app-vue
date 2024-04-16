@@ -13,7 +13,7 @@ defineProps<{
 </script>
 
 <template>
-    <Card className='w-48 h-64 flex flex-col justify-between hover:shadow-lg dark:hover:shadow-none hover:scale-105 transition-transform duration-300 group'>
+    <Card className='w-48 gap-4 flex flex-col justify-between hover:shadow-lg dark:hover:shadow-none hover:scale-105 transition-transform duration-300 group pt-6'>
         <CardHeader className='flex justify-center items-center'>
             <img
                 :src='img'
@@ -22,9 +22,9 @@ defineProps<{
             />
         </CardHeader>
         <CardContent>
-            <CardTitle>{{name}}</CardTitle>
+            <CardTitle class="capitalize">{{name}}</CardTitle>
             <CardDescription class="flex flex-col">
-                    <span v-for='(type, index) in types' :key='index'>
+                    <span v-for='(type, index) in types' :key='index' class="capitalize text-sm">
                         {{type.type.name}}
                     </span>
             </CardDescription>
