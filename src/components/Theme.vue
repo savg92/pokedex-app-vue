@@ -16,7 +16,7 @@ const mode = useColorMode()
         <span class="sr-only">Toggle theme</span>
       </Button>
     </DropdownMenuTrigger>
-    <DropdownMenuContent align="end">
+    <DropdownMenuContent align="end" class="bg-white dark:bg-gray-800">
       <DropdownMenuItem @click="mode = 'light'">
         Light
       </DropdownMenuItem>

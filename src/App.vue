@@ -16,12 +16,11 @@ const { isPending, isError, data, error } = useQuery({
 
 </script>
 
-<template>
+<template class="bg-gray-100 dark:bg-gray-800 min-h-screen">
   <Theme/>
   <span v-if="isPending">Loading...</span>
   <span v-else-if="isError">Error: {{ error?.message }}</span>
-  <div v-else>
-    <div class="grid grid-cols-3 gap-4">
+  <div v-else class="flex flex-wrap gap-4 items-center justify-center">
       <CardPokemon
         v-for="pokemon in data"
         :key="pokemon.name"
@@ -29,6 +28,5 @@ const { isPending, isError, data, error } = useQuery({
         :img="pokemon.sprites.other['official-artwork'].front_default"
         :types="pokemon.types"
       />
-    </div>
   </div>
 </template>
