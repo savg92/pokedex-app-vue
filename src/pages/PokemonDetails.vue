@@ -12,7 +12,7 @@
 	const pokemonId = route.params.pokemon;
 
 	// Query
-	const { isPending, isError, data, error } = useQuery({
+	const { isLoading, isError, data, error } = useQuery({
 		queryKey: ['pokemon'],
 		queryFn: () => getPokemon(pokemonId as string),
 	});
@@ -36,7 +36,7 @@
 </script>
 
 <template class="bg-gray-100 dark:bg-gray-800 min-h-screen">
-	<span v-if="isPending">Loading...</span>
+	<span v-if="isLoading">Loading...</span>
 	<span v-else-if="isError">Error: {{ error?.message }}</span>
 	<div
 		v-else

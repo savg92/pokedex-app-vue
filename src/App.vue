@@ -7,9 +7,9 @@ import { RouterLink } from 'vue-router';
 
 <template class="bg-gray-100 dark:bg-gray-800 min-h-screen">
   <Theme/>
-    <div>
+    <div class="flex justify-center gap-4 mt-4">
       <RouterLink to="/">Go to Home</RouterLink>
-      <RouterLink to="/home">Go to About</RouterLink>
+      <RouterLink to="/favorites">Go to Favorites</RouterLink>
     </div>
 
   <div>
