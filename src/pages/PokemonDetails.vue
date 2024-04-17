@@ -116,6 +116,12 @@
 					</Button>
 				</div>
 			</div>
+
+			<RouterLink to="/">
+				<Button class="mt-8" variant="default">
+					Go back
+				</Button>
+			</RouterLink>
 		</div>
 	</div>
 </template>

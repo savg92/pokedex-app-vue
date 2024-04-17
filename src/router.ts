@@ -1,6 +1,5 @@
-import { createRouter, createMemoryHistory } from 'vue-router';
+import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router';
 
-// import App from './App.vue';
 import PokemonDetails from './pages/PokemonDetails.vue';
 import Pokemons from './pages/Pokemons.vue';
 import Favorites from './pages/Favorites.vue';
@@ -13,7 +12,8 @@ const routes = [
 ];
 
 const router = createRouter({
-	history: createMemoryHistory(),
+	// history: createMemoryHistory(),
+	history: createWebHistory(),
 	routes,
 });
 
