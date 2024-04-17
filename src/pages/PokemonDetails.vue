@@ -5,7 +5,6 @@
 	import { Button } from '../components/ui/button';
 
 	import { useRoute } from 'vue-router';
-	import { CardDescription } from '@/components/ui/card';
 	import { ref, watch } from 'vue';
 
 	const route = useRoute();
