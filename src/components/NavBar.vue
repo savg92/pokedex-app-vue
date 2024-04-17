@@ -6,7 +6,7 @@
 
 <template>
 	<nav
-		class="bg-gray-200 dark:bg-gray-800 p-4 flex justify-between items-center"
+		class="bg-gray-200 dark:bg-black p-4 flex justify-between items-center"
 	>
 		<div>
 			<p class="text-2xl font-bold">Pokemon App</p>
