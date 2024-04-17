@@ -13,7 +13,7 @@ defineProps<{
 </script>
 
 <template>
-    <Card className='w-48 gap-4 flex flex-col justify-between hover:shadow-lg dark:hover:shadow-none hover:scale-105 transition-transform duration-300 group pt-6'>
+    <Card className='w-48 gap-4 flex flex-col justify-between hover:shadow-lg dark:hover:shadow-none hover:scale-105 transition-transform duration-300 group pt-6 rounded-xl'>
         <CardHeader className='flex justify-center items-center'>
             <img
                 :src='img'
