@@ -44,6 +44,11 @@
 	>
 		<div class="flex flex-col items-center">
 			<h1 class="text-4xl text-center font-bold">Pokemon Details</h1>
+			<h2
+				class="text-2xl text-center font-bold capitalize mt-4"
+			>
+				{{ data.name }}
+			</h2>
 			<div class="mt-8 flex justify-center items-center">
 				<div class="flex justify-center items-center w-max">
 					<img
@@ -52,7 +57,7 @@
 						class="w-72 h-72 hover:scale-110 transition-transform duration-300"
 					/>
 				</div>
-				<CardDescription
+				<div
 					class="flex flex-col gap-6 md:border-l-2 justify-start md:pl-12"
 				>
 					<h2 class="text-xl underline font-bold">Details</h2>
@@ -103,13 +108,13 @@
 					</div>
 					<Button
 						@click="handleAddRemoveToFavorites(data.name)"
-						class="w-36"
+						class=""
 						variant="destructive"
 					>
 						{{ favorites.includes(data.name) ? 'Remove from' : 'Add to' }}
 						Favorites
 					</Button>
-				</CardDescription>
+				</div>
 			</div>
 		</div>
 	</div>

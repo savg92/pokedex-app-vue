@@ -2,7 +2,6 @@ import { createRouter, createMemoryHistory } from 'vue-router';
 
 // import App from './App.vue';
 import PokemonDetails from './pages/PokemonDetails.vue';
-import HelloWorld from './pages/HelloWorld.vue';
 import Pokemons from './pages/Pokemons.vue';
 import Favorites from './pages/Favorites.vue';
 
