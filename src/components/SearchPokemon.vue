@@ -52,6 +52,12 @@
 			v-model="query"
 		/>
 		<button type="submit">Search</button>
+		<button @click.prevent="{
+			query='';
+			message=''
+		}">
+			clear
+		</button>
 	</form>
 	<p v-if="message">{{ message }}</p>
 </template>
