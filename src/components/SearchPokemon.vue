@@ -17,21 +17,21 @@
 		enabled: searchTrigger,
 	});
 
-	// console.log(data);
-
 	watch(searchTrigger, (newVal) => {
 		if (newVal) {
-			if (isError.value) {
-				message.value = error.value ? error.value.message : 'An error occurred';
+			if (isError) {
+				message.value = error.value ? error.value.message : 'Not found';
 			}
-			if (data.value === undefined) {
-				message.value = 'No Pokemon found ';
-			} else {
-				// console.log(data.value);
-				router.push(`/${query.value}`);
-				query.value = '';
-				message.value = '';
-			}
+			watch(data, (newVal) => {
+				if (newVal === undefined) {
+					message.value = 'No Pokemon found1 ';
+					console.log(newVal);
+				} else {
+					router.push(`/${query.value}`);
+					query.value = '';
+					message.value = '';
+				}
+			});
 			searchTrigger.value = false;
 		}
 	});
