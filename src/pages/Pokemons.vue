@@ -26,7 +26,7 @@
 	const page = ref<number>(
 		parseInt(typeof route.query.page === 'string' ? route.query.page : '1')
 	);
-	const pageSize = ref<number>(10);
+	const pageSize = ref<number>(21);
 
 	// Query
 	const { isPending, isError, data, error } = useQuery({
