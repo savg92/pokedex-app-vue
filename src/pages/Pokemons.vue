@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, computed, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 	import { useQuery } from '@tanstack/vue-query';
 
 	import { getPokemons } from '../services/pokemonApi';
@@ -18,10 +20,11 @@
 	} from '@/components/ui/pagination';
 	import { Button } from '@/components/ui/button';
 
-	import { ref, computed } from 'vue';
+    const router = useRouter();
+    const route = useRoute();
 
-	const page = ref<number>(1);
-	const pageSize = ref<number>(10);
+const page = ref<number>(parseInt(typeof route.query.page === 'string' ? route.query.page : '1'));
+const pageSize = ref<number>(10);
 
 	// Query
 	const { isPending, isError, data, error } = useQuery({
@@ -41,25 +44,30 @@
 	const nextPage = () => {
 		if (data.value && page.value * pageSize.value < data.value.length) {
 			page.value++;
+      router.push({ query: { page: page.value.toString() } });
 		}
 	};
 
 	const prevPage = () => {
 		if (page.value > 1) {
 			page.value--;
+      router.push({ query: { page: page.value.toString() } });
 		}
 	};
 
 	const goToPage = (newValue: number) => {
 		page.value = newValue;
+    router.push({ query: { page: newValue.toString() } });
 	};
 
 	const goToFirstPage = () => {
 		page.value = 1;
+    router.push({ query: { page: '1' } });
 	};
 
 	const goToLastPage = () => {
 		page.value = Math.ceil((data.value?.length ?? 0) / (pageSize.value ?? 1));
+    router.push({ query: { page: page.value.toString() } });
 	};
 </script>
 
@@ -92,7 +100,7 @@
 				:total="data?.length"
 				:sibling-count="1"
 				show-edges
-				:default-page="1"
+				:default-page="page"
         :itemsPerPage="pageSize"
 			>
 				<PaginationList
