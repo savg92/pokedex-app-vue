@@ -1,9 +1,32 @@
-# Vue 3 + TypeScript + Vite
+### Pokedex App - Vue.js
+This is a simple Pokedex app made with Vue.js. It uses the [PokeAPI](https://pokeapi.co/) to fetch the data of the pokemons. The app is responsive and has a search bar to filter the pokemons by name. You can also click on a pokemon to see more details about it.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Technologies
+- [Vue.js](https://vuejs.org/)
+- [Axios](https://axios-http.com/)
+- [PokeAPI](https://pokeapi.co/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vue Router](https://router.vuejs.org/)
+- [Tankstack Query](https://tanstack.com/query/latest/)
 
-## Recommended Setup
+### How to run
+1. Clone the repository
+2. Install the dependencies with the following command:
+```
+npm install
+```
+```
+bun install
+```
+3. Run the app with `npm run serve`
+```
+npm run dev
+```
+```
+bun dev
+```
+4. Open your browser and go to `http://localhost:5173/`
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
-
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+### License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
