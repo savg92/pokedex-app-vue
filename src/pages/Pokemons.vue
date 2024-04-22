@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { ref, computed, watch } from 'vue';
+	import { ref, computed } from 'vue';
 	import { useRoute, useRouter } from 'vue-router';
 	import { useQuery } from '@tanstack/vue-query';
 
