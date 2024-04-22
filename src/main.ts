@@ -5,5 +5,4 @@ import router from './router';
 
 import App from './App.vue';
 
-
 createApp(App).use(VueQueryPlugin).use(router).mount('#app');
