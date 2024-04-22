@@ -23,6 +23,9 @@
 	const router = useRouter();
 	const route = useRoute();
 
+	// set title of the page
+	document.title = 'Pokedex';
+
 	const page = ref<number>(
 		parseInt(typeof route.query.page === 'string' ? route.query.page : '1')
 	);

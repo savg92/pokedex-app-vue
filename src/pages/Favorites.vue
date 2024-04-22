@@ -3,7 +3,10 @@
 	import { getPokemon } from '@/services/pokemonApi';
 	import { useQuery } from '@tanstack/vue-query';
 	import { ref, watchEffect } from 'vue';
-import { RouterLink } from 'vue-router';
+	import { RouterLink } from 'vue-router';
+
+	// set title of the page
+	document.title = 'Pokedex - Favorites';
 
 	const favorites = ref<string[]>(
 		localStorage.getItem('favorites')

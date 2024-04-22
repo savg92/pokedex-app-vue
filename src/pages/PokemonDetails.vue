@@ -10,6 +10,9 @@
 	const route = useRoute();
 	const pokemonId = route.params.pokemon;
 
+	// set title of the page
+	document.title = `Pokemon - ${pokemonId[0].toUpperCase()}${pokemonId.slice(1)}`;
+
 	// Query
 	const { isLoading, isError, data, error } = useQuery({
 		queryKey: ['pokemon'],
