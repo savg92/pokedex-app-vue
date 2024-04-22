@@ -4,6 +4,7 @@
 	import { useQuery } from '@tanstack/vue-query';
 	import { getPokemon } from '@/services/pokemonApi';
 	import { Button } from './ui/button';
+import { Input } from './ui/input';
 
 	const router = useRouter();
 
@@ -52,11 +53,9 @@
 			class="flex justify-center items-center gap-4"
 			@submit.prevent="searchPokemon"
 		>
-			<input
-				type="text"
-				placeholder="Search Pokemon"
+			<Input 
 				v-model="query"
-				class="p-2 border border-gray-300 rounded-md"
+				placeholder="Search Pokemon"
 			/>
 			<Button
 				type="submit"
