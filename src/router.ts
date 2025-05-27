@@ -1,4 +1,4 @@
-import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 import PokemonDetails from './pages/PokemonDetails.vue';
 import Pokemons from './pages/Pokemons.vue';
@@ -8,7 +8,6 @@ const routes = [
 	{ path: '/', component: Pokemons },
 	{ path: '/:pokemon', component: PokemonDetails },
 	{ path: '/favorites', component: Favorites },
-
 ];
 
 const router = createRouter({
